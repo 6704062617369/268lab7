@@ -1,0 +1,22 @@
+double functionM(void);
+int functionN(int n, double x);
+double functionO(double, int, double, int);
+double functionP(int a, int n, int b, int c);
+ 
+int main(void) {
+  	int a, b, c, d, e;
+  	double r, s, t, u, v;
+  	//function calling (a-k)
+}
+
+//a: functionM(); ไม่มีข้อผิดพลาด
+//b:  a = functionM(); มีข้อผิดพลาด เชิงชนิดของข้อมูล double->int
+//c:  b = functionN(a, b); ไม่มีข้อผิดพลาด
+//d:  r = functionO(r,a,s,b); ไม่มีข้อผิดพลาด
+//e:  s = functionP(a,b,c,d,e); มีข้อผิดพลาด จำนวนพารามิเตอร์เกิน รับมา4 แต่ส่งมา5ตัว
+//f:  u = functionM(); ไม่มีข้อผิดพลาด
+//g:  c = d + functionN(r,s); มีข้อผิดพลาด d ยังไม่ได้รับค่า 
+//h:  t = s * functionO(r, a, r, a); ไม่มีข้อผิดพลาด
+//i:  a = v + functionP(r, s, t, t); มีข้อผิดพลาาด เพราะ functionP รับพารามิเตอร์เป็น int
+//j:  functionP(functionN(a, a), s, t, t+r); มีข้อผิดพลาด เพราะ s, t, และ t + r ต้องแปลงเป็น int ก่อนจะส่งไปให้ functionP
+//k:  v = functionP(functionN(a, a), s, t, t+r); มีข้อผิดพลาด เพราะs, t, และ t + r ต้องแปลงเป็น int ก่อนส่งไปให้ functionP
